@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://thomasxing.github.io/2017/04/20/DOM二级事件/index.html">
 <meta property="og:site_name" content="thomasxing">
 <meta property="og:description" content="DOM二级事件 W3C 标准——addEventListener 语法: addEventListener(‘事件’,’函数’,’冒泡/捕捉’)  绑定多个事件123//html&amp;lt;input type=&quot;button&quot; id=&quot;test1&quot; value=&apos;增加&apos;&amp;gt;&amp;lt;input type=&quot;button&quot; id=&quot;test2&quot; value=&apos;删除&apos;&amp;gt; 123456789101">
-<meta property="og:updated_time" content="2017-04-20T00:25:33.000Z">
+<meta property="og:updated_time" content="2017-04-20T02:00:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM二级事件">
 <meta name="twitter:description" content="DOM二级事件 W3C 标准——addEventListener 语法: addEventListener(‘事件’,’函数’,’冒泡/捕捉’)  绑定多个事件123//html&amp;lt;input type=&quot;button&quot; id=&quot;test1&quot; value=&apos;增加&apos;&amp;gt;&amp;lt;input type=&quot;button&quot; id=&quot;test2&quot; value=&apos;删除&apos;&amp;gt; 123456789101">
@@ -110,7 +110,7 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
@@ -320,17 +320,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/20/DOM二级事件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/20/DOM二级事件/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -359,7 +348,7 @@
 </blockquote>
 <h3 id="绑定多个事件"><a href="#绑定多个事件" class="headerlink" title="绑定多个事件"></a>绑定多个事件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//html</div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"test1"</span> <span class="attr">value</span>=<span class="string">'增加'</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"test2"</span> <span class="attr">value</span>=<span class="string">'删除'</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//js</span></div><div class="line"><span class="comment">//绑定多个事件按顺序执行</span></div><div class="line"><span class="keyword">var</span> aa = <span class="number">0</span>;</div><div class="line"><span class="keyword">var</span> increment = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(a++)&#125;</div><div class="line"><span class="keyword">var</span> decrement = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(a--)&#125;</div><div class="line">test1.addEventListener(<span class="string">'click'</span>,increment);</div><div class="line">test1.addEventListener(<span class="string">'click'</span>,decrement);</div><div class="line"></div><div class="line"><span class="comment">//删除绑定事件</span></div><div class="line">test2.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	test1.removeEventListener(<span class="string">'click'</span>,increment);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="捕捉与冒泡"><a href="#捕捉与冒泡" class="headerlink" title="捕捉与冒泡"></a>捕捉与冒泡</h1>
+<h3 id="捕捉与冒泡"><a href="#捕捉与冒泡" class="headerlink" title="捕捉与冒泡"></a>捕捉与冒泡</h3>
       
     </div>
 
@@ -434,13 +423,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     
   </div>
 
@@ -536,7 +518,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM二级事件"><span class="nav-text">DOM二级事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定多个事件"><span class="nav-text">绑定多个事件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#捕捉与冒泡"><span class="nav-text">捕捉与冒泡</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM二级事件"><span class="nav-text">DOM二级事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定多个事件"><span class="nav-text">绑定多个事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#捕捉与冒泡"><span class="nav-text">捕捉与冒泡</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -665,26 +647,6 @@
 
   
 
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://thomasxing.github.io/2017/04/20/DOM二级事件/';
-          this.page.identifier = '2017/04/20/DOM二级事件/';
-          this.page.title = 'DOM二级事件';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
 
   
 
